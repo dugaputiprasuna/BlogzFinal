@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<H1 align=center>Signup</H1>
+<form action="/signup" method="post">
+    <table align="center" border="0" border=0>
+        <tr>
+            <td><label for="email">User name</label></td>
+            <td>
+                <input name="username" type="text" value="{{ username }}"> {{unamemsg}}
+            </td>
+        </tr>
+        
+        <tr>
+                <td><label for="password">Password</label></td>
+                <td>
+                    <input name="password" type="password"> {{passwordmsg}}
+                </td>
+            </tr>
+            <tr>
+                    <td><label for="verifypassword">verifyPassword</label></td>
+                    <td>
+                        <input name="verifypassword" type="password"> {{verifyPasswordmsg}}
+                    </td>
+                </tr>  
+                
+                
+
+        </tr>
+    <tr><td><input type="submit" value="submit">
+    </td></tr>
+    </table>
+    <H3>{{signupmessage }}</H3>
+    </form>
+{% endblock %}

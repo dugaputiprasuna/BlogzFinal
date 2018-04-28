@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table border="0"  align="right">
+       
+    </table>
+
+<form action="/login" method="post">
+    <table   align="center" border="0">
+          
+        <tr><td colspan="3">&nbsp;</td></tr>
+        <tr><td colspan="3"><h1>Login</h1> </td></tr>
+        <tr>
+            <td><label for="username">User Name</label></td>
+            <td>
+                <input name="username" type="username" value="{{ username }}">
+               {{unamemsg}}
+            </td>
+            
+        </tr>
+        <tr>
+            <td><label for="password">Password</label></td>
+            <td>
+                <input name="password" type="password">
+            </td>
+          
+        </tr>
+        <tr><td colspan="2"><input type="submit" value="Submit"> </td></tr>
+       
+        <tr><td colspan="3">
+            
+            
+            Don't have an account? <a href="/register">Create one!</a> </td></tr>
+        
+    </table>
+    
+</form>
+
+{% endblock %}

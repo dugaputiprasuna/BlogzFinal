@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% if users|length == 0 %}
+    <p>No Users yet</p>
+{% else %}
+        <H1 align=center>Build a Blog</H1>
+        <table width="500pt;">
+        {% for user in users %}
+       
+       
+        
+        
+        
+               
+        <ul> <align=centre>
+        <li><a href="/blog?userid={{user.id}}">{{user.username}}</a></li>
+        </ul>  
+        
+        {% endfor %} 
+    </table>
+
+{% endif %}
+        
+{% endblock %}
